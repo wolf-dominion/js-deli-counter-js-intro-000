@@ -56,7 +56,7 @@ function currentLine(currentLinev)
 }
 
 // ticket number stays with the person's name 
-  var ticketNum = 0; // ticket 
+var ticketNum = 0; // ticket 
 
 function preserveTicket(currentLinev, newName, ticketNum)
 {
