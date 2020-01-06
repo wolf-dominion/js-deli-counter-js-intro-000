@@ -23,7 +23,8 @@ function nowServing(currentLinev)
   {
     return "Currently serving " + currentLinev.shift() + ".";
   }
-  else
+  else // else statement not needed since if the if statement doesn't execute, it would automatically 
+  // return the no one is here line
   {
     return "There is nobody waiting to be served!";
   }
@@ -52,4 +53,21 @@ function currentLine(currentLinev)
  {
    return "The line is currently empty.";
  }
+}
+
+// ticket number stays with the person's name 
+  var ticketNum = 0; // ticket 
+
+function preserveTicket(currentLinev, newName, ticketNum)
+{
+  
+  // an object with 2 key value pairs, needs to be added to the end of the currentLinev. 
+  
+  ticketNum++;
+  var customerInfo = {};
+  customerInfo["name"] = newName;
+  customerInfo["positionInLine"] = ticketNum;
+  currentLinev.push(customerInfo);
+  return `Welcome, ${newName}. You are number ${ticketNum} in line.`;
+
 }
