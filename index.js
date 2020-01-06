@@ -68,6 +68,6 @@ function preserveTicket(currentLinev, newName, ticketNum)
   customerInfo["name"] = newName;
   customerInfo["positionInLine"] = ticketNum;
   currentLinev.push(customerInfo);
-  return `Welcome, ${newName}. You are number ${ticketNum} in line.`;
+  return `Welcome, ${customerInfo["name"]}. You are number ${customerInfo["positionInLine"]} in line.`;
 
 }
